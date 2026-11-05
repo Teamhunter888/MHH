@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MHH | Restricted Records</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #05070b;
+    color: #c2cad5;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+}
+
+header {
+    background: #0b1019;
+    border-bottom: 2px solid #743d4c;
+    padding: 22px;
+}
+
+header h1 {
+    margin: 0;
+    color: #e0e5ed;
+    font-size: 21px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 7px 0 0;
+    color: #a47783;
+    font-size: 12px;
+}
+
+main {
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 0 18px;
+}
+
+.panel {
+    background: #0c1119;
+    border: 1px solid #34313b;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #bd8290;
+    font-size: 15px;
+    border-bottom: 1px solid #49313c;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.description {
+    color: #929eae;
+    line-height: 1.8;
+}
+
+.record {
+    background: #080c12;
+    border: 1px solid #37313a;
+    margin-top: 14px;
+}
+
+.record button {
+    width: 100%;
+    background: transparent;
+    color: #c99aa5;
+    border: none;
+    padding: 16px;
+    text-align: left;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.record button:hover {
+    background: #17121a;
+}
+
+.record-content {
+    display: none;
+    padding: 18px;
+    border-top: 1px solid #37313a;
+    color: #b1bac7;
+    line-height: 1.8;
+}
+
+.label { color: #c58b9a; }
+.warning { color: #d6a477; }
+
+.redacted {
+    color: #6f7885;
+    letter-spacing: 2px;
+}
+
+.alert {
+    border: 1px solid #74404d;
+    padding: 13px;
+    color: #d18a8a;
+    background: #170d12;
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #68717e;
+    font-size: 11px;
+    border-top: 1px solid #34313b;
+}
+
+a {
+    color: #c18b9a;
+    text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MOUNTAIN HILL HEALTH</h1>
+    <p>INTERNAL INFORMATION MANAGEMENT SYSTEM / RESTRICTED DIVISION</p>
+</header>
+
+<main>
+
+<div class="panel">
+    <h2>RESTRICTED INFORMATION TERMINAL</h2>
+
+    <p class="alert">
+        WARNING: UNAUTHORIZED ACCESS DETECTED IN ARCHIVE LOG.
+    </p>
+
+    <p class="description">
+        This directory contains records withheld from standard
+        corporate databases. Access and distribution are limited
+        to designated executive personnel.
+    </p>
+
+    <p><span class="label">DIRECTORY:</span> RESTRICTED / 04</p>
+    <p><span class="label">CLASSIFICATION:</span> EXECUTIVE ONLY</p>
+    <p><span class="label">RECORD STATUS:</span> PARTIALLY RECOVERED</p>
+    <p><span class="label">LAST VERIFIED:</span> UNKNOWN</p>
+</div>
+
+<div class="panel">
+    <h2>RECOVERED EXECUTIVE RECORDS</h2>
+
+    <div class="record">
+        <button onclick="toggleRecord('file1')">
+            + RESTRICTED FILE 001 / ORIGINAL PROJECT
+        </button>
+
+        <div class="record-content" id="file1">
+            <p><span class="label">DATE:</span> November 20, 2001</p>
+            <p><span class="label">PROJECT STATUS:</span> ACTIVE</p>
+            <p><span class="label">ORGANIZATION:</span> NOT LISTED</p>
+
+            <p>
+                The original initiative was approved for continued
+                operation following the November 20 review.
+            </p>
+
+            <p>
+                Personnel, research materials, and associated records
+                were transferred under a revised administrative
+                structure.
+            </p>
+
+            <p class="warning">
+                The project designation must not appear in public
+                organizational records.
+            </p>
+        </div>
+    </div>
+
+    <div class="record">
+        <button onclick="toggleRecord('file2')">
+            + RESTRICTED FILE 002 / NOLESTIC DEVELOPMENT
+        </button>
+
+        <div class="record-content" id="file2">
+            <p><span class="label">DATE:</span> September 2012</p>
+            <p><span class="label">PROJECT:</span> NL-2011</p>
+            <p><span class="label">CLASSIFICATION:</span> RESTRICTED</p>
+
+            <p>
+                Public documentation describes Nolestic as a
+                sleep and wellness product.
+            </p>
+
+            <p>
+                Internal development records identify additional
+                objectives not included in approved public materials.
+            </p>
+
+            <p>
+                Distribution planning is to proceed independently
+                of outstanding research review.
+            </p>
+
+            <p class="redacted">
+                [PRIMARY OBJECTIVE: RECORD UNAVAILABLE]
+            </p>
+        </div>
+    </div>
+
+    <div class="record">
+        <button onclick="toggleRecord('file3')">
+            + RESTRICTED FILE 003 / EXECUTIVE CORRESPONDENCE
+        </button>
+
+        <div class="record-content" id="file3">
+            <p><span class="label">DATE:</span> January 17, 2014</p>
+            <p><span class="label">FROM:</span> Office of Administration</p>
+            <p><span class="label">TO:</span> Executive Research Committee</p>
+
+            <p>
+                The committee has been informed that reports
+                associated with Mitokilaphilea have continued
+                to appear in internal documentation.
+            </p>
+
+            <p>
+                These reports are not to be incorporated into
+                public-facing product information.
+            </p>
+
+            <p>
+                No revisions to the current public explanation
+                are authorized.
+            </p>
+
+            <p class="warning">
+                The committee acknowledges the risks associated
+                with continued distribution.
+            </p>
+        </div>
+    </div>
+
+    <div class="record">
+        <button onclick="toggleRecord('file4')">
+            + RESTRICTED FILE 004 / FINAL AUTHORIZATION
+        </button>
+
+        <div class="record-content" id="file4">
+            <p><span class="label">DATE:</span> November 20, 2011</p>
+            <p><span class="label">AUTHORIZATION:</span> APPROVED</p>
+            <p><span class="label">SIGNATORY:</span> [REDACTED]</p>
+
+            <p>
+                The organization is to proceed under the name
+                Mountain Hill Health.
+            </p>
+
+            <p>
+                All prior project materials are to be retained
+                within restricted archives. The public founding
+                date is to remain November 20, 2011.
+            </p>
+
+            <p>
+                The original initiative is not to be acknowledged
+                in corporate history.
+            </p>
+
+            <p class="warning">
+                This authorization confirms continuation, not
+                commencement, of the original project.
+            </p>
+
+            <p class="redacted">
+                [ADDITIONAL SIGNATURES NOT RECOVERED]
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<div class="panel">
+    <h2>SYSTEM MESSAGE</h2>
+
+    <p class="description">
+        Archive reconstruction has reached its current limit.
+        Several records referenced by this directory remain
+        unavailable.
+    </p>
+
+    <p class="warning">
+        THE PUBLIC FOUNDING DATE IS NOT THE ORIGINAL PROJECT DATE.
+    </p>
+
+    <p class="redacted">
+        RECORD CHAIN: 11-20-01 / NL-2011 / MHH
+    </p>
+
+    <p class="description">
+        No additional records are scheduled for release.
+    </p>
+</div>
+
+<div class="panel">
+    <h2>DIRECTORY NAVIGATION</h2>
+    <p><a href="sectors.html">← RETURN TO SECTORS DATABASE</a></p>
+    <p><a href="archives.html">OPEN ARCHIVES DIRECTORY</a></p>
+    <p><a href="research.html">OPEN RESEARCH DIRECTORY</a></p>
+    <p><a href="personnel.html">OPEN PERSONNEL DIRECTORY</a></p>
+</div>
+
+</main>
+
+<footer>
+    MHH INTERNAL INFORMATION MANAGEMENT SYSTEM<br>
+    RESTRICTED DIVISION / RECORD SET 04<br>
+    THIS IS A FICTIONAL HORROR ARG PROJECT
+</footer>
+
+<script>
+function toggleRecord(id) {
+    const record = document.getElementById(id);
+    const isOpen = record.style.display === "block";
+    record.style.display = isOpen ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
