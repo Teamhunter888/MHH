@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MHH | Personnel Records</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #080d16;
+    color: #cbd6e8;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+}
+
+header {
+    background: #101c30;
+    border-bottom: 2px solid #2879c7;
+    padding: 22px;
+}
+
+header h1 {
+    margin: 0;
+    color: #e5efff;
+    font-size: 21px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 7px 0 0;
+    color: #729ac6;
+    font-size: 12px;
+}
+
+main {
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 0 18px;
+}
+
+.panel {
+    background: #101927;
+    border: 1px solid #263b56;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #6eb7ff;
+    font-size: 15px;
+    border-bottom: 1px solid #294765;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.description {
+    color: #91a5bf;
+    line-height: 1.7;
+}
+
+.record {
+    background: #0b1421;
+    border: 1px solid #263d59;
+    margin-top: 14px;
+}
+
+.record button {
+    width: 100%;
+    background: transparent;
+    color: #a9d4ff;
+    border: none;
+    padding: 16px;
+    text-align: left;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.record button:hover {
+    background: #14253a;
+}
+
+.record-content {
+    display: none;
+    padding: 18px;
+    border-top: 1px solid #263d59;
+    color: #aebdd0;
+    line-height: 1.8;
+}
+
+.record-content p {
+    margin: 8px 0;
+}
+
+.label {
+    color: #6eb7ff;
+}
+
+.warning {
+    color: #d7aa68;
+}
+
+.redacted {
+    color: #68788d;
+    letter-spacing: 2px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #63758d;
+    font-size: 11px;
+    border-top: 1px solid #263b56;
+}
+
+a {
+    color: #73baff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>MOUNTAIN HILL HEALTH</h1>
+    <p>INTERNAL INFORMATION MANAGEMENT SYSTEM / PERSONNEL DIVISION</p>
+</header>
+
+<main>
+
+<div class="panel">
+    <h2>PERSONNEL RECORDS / ACCESS TERMINAL</h2>
+    <p class="description">
+        Employee documentation and internal personnel records.
+        Access is restricted to authorized Information Management
+        personnel.
+    </p>
+    <p><span class="label">DIRECTORY:</span> PERSONNEL / 03</p>
+    <p><span class="label">RECORD STATUS:</span> PARTIALLY RECOVERED</p>
+    <p><span class="label">DATABASE:</span> MHH INTERNAL ARCHIVE</p>
+</div>
+
+<div class="panel">
+    <h2>AVAILABLE EMPLOYEE FILES</h2>
+
+    <div class="record">
+        <button onclick="toggleRecord('file1')">
+            + EMPLOYEE FILE 001 / DEPARTMENT ASSIGNMENT
+        </button>
+        <div class="record-content" id="file1">
+            <p><span class="label">DOCUMENT DATE:</span> March 14, 2012</p>
+            <p><span class="label">DEPARTMENT:</span> Research and Development</p>
+            <p><span class="label">SUBJECT:</span> Employee Assignment Summary</p>
+            <p>
+                Personnel transfers have been approved for several
+                employees previously assigned to the original
+                research initiative.
+            </p>
+            <p>
+                All transferred personnel are instructed to continue
+                using the current project designation.
+            </p>
+            <p class="warning">
+                NOTE: Previous project documentation is not to be
+                included in standard employee orientation materials.
+            </p>
+        </div>
+    </div>
+
+    <div class="record">
+        <button onclick="toggleRecord('file2')">
+            + EMPLOYEE FILE 002 / INTERNAL CORRESPONDENCE
+        </button>
+        <div class="record-content" id="file2">
+            <p><span class="label">DOCUMENT DATE:</span> August 22, 2013</p>
+            <p><span class="label">FROM:</span> Research Division</p>
+            <p><span class="label">TO:</span> Personnel Administration</p>
+            <p><span class="label">SUBJECT:</span> Historical Project Records</p>
+
+            <p>
+                Several members of the current research team have
+                requested access to documentation predating the
+                company's official registration.
+            </p>
+
+            <p>
+                These requests are not to be fulfilled through
+                standard personnel channels.
+            </p>
+
+            <p>
+                Employees should be reminded that their assigned
+                employment dates remain unchanged.
+            </p>
+
+            <p class="redacted">
+                [REMAINDER OF CORRESPONDENCE WITHHELD]
+            </p>
+        </div>
+    </div>
+
+    <div class="record">
+        <button onclick="toggleRecord('file3')">
+            + EMPLOYEE FILE 003 / PERSONNEL REVIEW
+        </button>
+        <div class="record-content" id="file3">
+            <p><span class="label">DOCUMENT DATE:</span> February 06, 2014</p>
+            <p><span class="label">REVIEW STATUS:</span> INCOMPLETE</p>
+            <p><span class="label">SUBJECT:</span> Employee Conduct Review</p>
+
+            <p>
+                A review was initiated following repeated inquiries
+                regarding the original research facility and its
+                previous occupants.
+            </p>
+
+            <p>
+                The employees involved have been reassigned.
+                Their previous department access has been revoked.
+            </p>
+
+            <p class="warning">
+                Additional interviews were suspended by administrative
+                order.
+            </p>
+
+            <p class="redacted">
+                [EMPLOYEE IDENTITIES UNAVAILABLE]
+            </p>
+        </div>
+    </div>
+
+    <div class="record">
+        <button onclick="toggleRecord('file4')">
+            + EMPLOYEE FILE 004 / CONFIDENTIAL NOTICE
+        </button>
+        <div class="record-content" id="file4">
+            <p><span class="label">DOCUMENT DATE:</span> November 20, 2011</p>
+            <p><span class="label">CLASSIFICATION:</span> CONFIDENTIAL</p>
+            <p><span class="label">DISTRIBUTION:</span> SELECT PERSONNEL</p>
+
+            <p>
+                All employees assigned to the transferred project
+                are reminded that the November 20, 2001 event is
+                not to be discussed outside approved channels.
+            </p>
+
+            <p>
+                Any questions regarding the original records must
+                be directed to the Office of Administration.
+            </p>
+
+            <p>
+                The official company history remains unchanged.
+            </p>
+
+            <p class="warning">
+                This notice supersedes all previous instructions.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<div class="panel">
+    <h2>SYSTEM NOTES</h2>
+    <p class="description">
+        Some personnel records may be incomplete due to archive
+        migration and document recovery procedures.
+    </p>
+    <p class="warning">
+        Unverified employee documentation should not be treated
+        as an official company statement.
+    </p>
+</div>
+
+<div class="panel">
+    <p><a href="sectors.html">← RETURN TO SECTORS DATABASE</a></p>
+    <p><a href="archives.html">OPEN ARCHIVES DIRECTORY →</a></p>
+</div>
+
+</main>
+
+<footer>
+    MHH INTERNAL INFORMATION MANAGEMENT SYSTEM<br>
+    PERSONNEL DIVISION / RECORD SET 03<br>
+    FICTIONAL HORROR ARG PROJECT
+</footer>
+
+<script>
+function toggleRecord(id) {
+    const record = document.getElementById(id);
+    const isOpen = record.style.display === "block";
+    record.style.display = isOpen ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
