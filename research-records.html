@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MHH Research Division</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #080f18;
+    color: #c5d5e5;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+header {
+    background: #101e2e;
+    border-bottom: 2px solid #2475ad;
+    padding: 20px;
+}
+
+.logo {
+    color: #75b9ed;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #728ba3;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+main {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 15px;
+}
+
+.system {
+    border: 1px solid #29445e;
+    background: #101b29;
+    padding: 22px;
+    margin-bottom: 22px;
+}
+
+h1 {
+    color: #8dc9fa;
+    font-size: 24px;
+}
+
+h2 {
+    color: #77b5e6;
+    font-size: 14px;
+    border-bottom: 1px solid #29445e;
+    padding-bottom: 10px;
+}
+
+.status {
+    color: #75d49a;
+    font-size: 11px;
+}
+
+.description {
+    color: #8da4ba;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.record {
+    margin: 15px 0;
+    border: 1px solid #29445e;
+    background: #0b1623;
+}
+
+.record button {
+    width: 100%;
+    padding: 17px;
+    background: #142438;
+    color: #9bcdf4;
+    border: none;
+    text-align: left;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.record button:hover {
+    background: #1c344d;
+}
+
+.record-content {
+    display: none;
+    padding: 18px;
+    color: #9aafc3;
+    font-size: 12px;
+    line-height: 1.9;
+    border-top: 1px solid #29445e;
+}
+
+.record-content.open {
+    display: block;
+}
+
+.record-meta {
+    color: #6e9fc8;
+    font-size: 10px;
+    margin-bottom: 12px;
+}
+
+.warning {
+    color: #d6ad75;
+    font-size: 11px;
+}
+
+.navigation a {
+    display: inline-block;
+    color: #75b9ed;
+    margin: 8px 12px 8px 0;
+    font-size: 12px;
+}
+
+footer {
+    border-top: 1px solid #29445e;
+    padding: 20px;
+    text-align: center;
+    color: #60758b;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+@media(max-width:600px) {
+    main {
+        margin: 15px auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MOUNTAIN HILL HEALTH</div>
+    <div class="subtitle">INTERNAL RESEARCH MANAGEMENT SYSTEM</div>
+</header>
+
+<main>
+
+<section class="system">
+    <div class="status">SYSTEM STATUS: ONLINE</div>
+
+    <h1>RESEARCH DIVISION</h1>
+
+    <p class="description">
+        Internal research documentation and development records.
+        <br><br>
+        Division access granted. Select a record to review its contents.
+    </p>
+
+    <p class="warning">
+        NOTICE: Certain historical research files may contain incomplete information.
+    </p>
+</section>
+
+<section class="system">
+    <h2>RESEARCH FILE INDEX</h2>
+
+    <div class="record">
+        <button onclick="toggleRecord('record1')">
+            01 / NL-2011 — INITIAL DEVELOPMENT
+        </button>
+        <div class="record-content" id="record1">
+            <div class="record-meta">
+                FILE DATE: SEPTEMBER 18, 2012<br>
+                PROJECT: NL-2011<br>
+                DEPARTMENT: RESEARCH & DEVELOPMENT
+            </div>
+
+            Initial development documentation for the
+            Nolestic project.
+
+            <br><br>
+
+            Public development objectives identify sleep
+            regulation and general wellness as the primary
+            areas of research.
+
+            <br><br>
+
+            An additional project objective appears in the
+            original documentation. The objective is not
+            included in the approved public product summary.
+
+            <br><br>
+
+            <span class="warning">
+                NOTE: Original objective classification has been revised.
+            </span>
+        </div>
+    </div>
+
+    <div class="record">
+        <button onclick="toggleRecord('record2')">
+            02 / OBSERVATION REPORT
+        </button>
+        <div class="record-content" id="record2">
+            <div class="record-meta">
+                FILE DATE: MAY 06, 2013<br>
+                PROJECT: NL-2011<br>
+                CLASSIFICATION: INTERNAL
+            </div>
+
+            Research staff documented unusual changes
+            during observation sessions.
+
+            <br><br>
+
+            Several reports describe subjects experiencing
+            difficulty distinguishing remembered events
+            from present surroundings.
+
+            <br><br>
+
+            Later reports identify a recurring pattern:
+            subjects increasingly rely on familiar memories
+            when interpreting their surroundings.
+
+            <br><br>
+
+            The reports were initially categorized as
+            unrelated observation errors.
+
+            <br><br>
+
+            <span class="warning">
+                REFERENCE: See associated archive documentation.
+            </span>
+        </div>
+    </div>
+
+    <div class="record">
+        <button onclick="toggleRecord('record3')">
+            03 / MITOKILAPHILEA — INTERNAL REFERENCE
+        </button>
+        <div class="record-content" id="record3">
+            <div class="record-meta">
+                FILE DATE: OCTOBER 21, 2013<br>
+                CLASSIFICATION: RESTRICTED REVIEW<br>
+                REFERENCE: MK-01
+            </div>
+
+            An internal research document introduces the
+            designation MITOKILAPHILEA.
+
+            <br><br>
+
+            The term is associated with the recurring
+            observation patterns documented in previous
+            reports.
+
+            <br><br>
+
+            The document states that the condition was
+            identified before its official inclusion in
+            the company's research classification system.
+
+            <br><br>
+
+            No explanation is provided for the earlier
+            identification date.
+
+            <br><br>
+
+            <span class="warning">
+                DOCUMENT HISTORY: ORIGINAL VERSION UNAVAILABLE.
+            </span>
+        </div>
+    </div>
+
+    <div class="record">
+        <button onclick="toggleRecord('record4')">
+            04 / PROJECT REVIEW — DISTRIBUTION
+        </button>
+        <div class="record-content" id="record4">
+            <div class="record-meta">
+                FILE DATE: JANUARY 17, 2014<br>
+                DEPARTMENT: RESEARCH & DEVELOPMENT<br>
+                CLASSIFICATION: INTERNAL
+            </div>
+
+            A review of the Nolestic project was conducted
+            following the identification of Mitokilaphilea.
+
+            <br><br>
+
+            The review acknowledges that the original
+            research objectives and the public product
+            description do not fully correspond.
+
+            <br><br>
+
+            Researchers requested that distribution
+            documentation be revised to reflect the
+            additional findings.
+
+            <br><br>
+
+            The request was not approved.
+
+            <br><br>
+
+            Final review instruction:
+
+            <br><br>
+
+            <span class="warning">
+                "Continue under the existing product classification.
+                No changes to public documentation are authorized."
+            </span>
+
+            <br><br>
+
+            APPROVAL STATUS: EXECUTIVE REVIEW COMPLETE.
+        </div>
+    </div>
+
+</section>
+
+<section class="system">
+    <h2>RELATED DIRECTORIES</h2>
+
+    <div class="navigation">
+        <a href="sectors.html">[ DATABASE HOME ]</a>
+        <a href="archives.html">[ ARCHIVES ]</a>
+        <a href="personnel.html">[ PERSONNEL ]</a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    MHH INTERNAL RESEARCH SYSTEM<br>
+    MOUNTAIN HILL HEALTH © 2026<br>
+    This website and all company information are part
+    of a fictional interactive horror project.
+</footer>
+
+<script>
+function toggleRecord(id) {
+    const record = document.getElementById(id);
+    record.classList.toggle("open");
+}
+</script>
+
+</body>
+</html>
