@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MHH Archives | Internal Database</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #080f18;
+    color: #c5d5e5;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+header {
+    background: #101e2e;
+    border-bottom: 2px solid #2475ad;
+    padding: 20px;
+}
+
+.logo {
+    color: #75b9ed;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #728ba3;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 15px;
+}
+
+.panel {
+    background: #101b29;
+    border: 1px solid #29445e;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #8dc9fa;
+    font-size: 23px;
+}
+
+h2 {
+    color: #77b5e6;
+    font-size: 14px;
+    border-bottom: 1px solid #29445e;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 12px;
+    line-height: 1.8;
+    color: #8da4ba;
+}
+
+.file {
+    background: #142438;
+    border: 1px solid #29445e;
+    padding: 16px;
+    margin: 12px 0;
+}
+
+.file strong {
+    color: #9bcdf4;
+    font-size: 13px;
+}
+
+.file button {
+    display: block;
+    margin-top: 12px;
+    background: #174c78;
+    color: white;
+    border: 1px solid #55b9ff;
+    padding: 9px 13px;
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.document {
+    display: none;
+    background: #080f19;
+    border: 1px solid #42617e;
+    padding: 18px;
+    margin-top: 12px;
+}
+
+.document p {
+    color: #b9cde0;
+}
+
+.document strong {
+    color: #75b9ed;
+}
+
+.status {
+    color: #75d49a;
+    font-size: 11px;
+}
+
+.warning {
+    color: #d6ad75 !important;
+}
+
+.back {
+    color: #75b9ed;
+    font-size: 12px;
+}
+
+footer {
+    border-top: 1px solid #29445e;
+    padding: 20px;
+    text-align: center;
+    color: #60758b;
+    font-size: 10px;
+    line-height: 1.8;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MOUNTAIN HILL HEALTH</div>
+    <div class="subtitle">
+        INTERNAL INFORMATION MANAGEMENT SYSTEM
+    </div>
+</header>
+
+<main>
+
+<section class="panel">
+    <div class="status">ARCHIVE SERVER: ONLINE</div>
+    <h1>01 / HISTORICAL ARCHIVES</h1>
+    <p>
+        Mountain Hill Health historical document repository.
+        Authorized access only.
+    </p>
+    <p>DIRECTORY: MHH / ARCHIVES / HISTORICAL</p>
+</section>
+
+<section class="panel">
+    <h2>AVAILABLE RECORDS</h2>
+
+    <div class="file">
+        <strong>FILE 001 — CORPORATE FOUNDATION</strong>
+        <p>Date: November 20, 2011</p>
+        <button onclick="openFile('file1')">OPEN RECORD</button>
+
+        <div class="document" id="file1">
+            <p><strong>DOCUMENT: CORPORATE FOUNDATION</strong></p>
+            <p>DATE: 11/20/2011</p>
+            <p>
+                Mountain Hill Health was officially established
+                in Phoenix, Arizona, on November 20, 2011.
+            </p>
+            <p>
+                Initial operations focused on regional healthcare
+                development, research and product innovation.
+            </p>
+            <p>RECORD STATUS: VERIFIED</p>
+        </div>
+    </div>
+
+    <div class="file">
+        <strong>FILE 002 — LEGACY REFERENCE</strong>
+        <p>Date: November 20, 2001</p>
+        <button onclick="openFile('file2')">OPEN RECORD</button>
+
+        <div class="document" id="file2">
+            <p><strong>DOCUMENT: LEGACY REFERENCE</strong></p>
+            <p>DATE: 11/20/2001</p>
+            <p class="warning">
+                ORIGINAL ORGANIZATION: NOT FOUND
+            </p>
+            <p>
+                An archived reference has been recovered from
+                the historical records directory.
+            </p>
+            <p>
+                The document identifies an organizational
+                activity dated November 20, 2001.
+            </p>
+            <p class="warning">
+                ASSOCIATED COMPANY RECORD: UNAVAILABLE
+            </p>
+            <p>RECORD STATUS: INCOMPLETE</p>
+        </div>
+    </div>
+
+    <div class="file">
+        <strong>FILE 003 — ARCHIVE TRANSFER REPORT</strong>
+        <p>Date: March 14, 2012</p>
+        <button onclick="openFile('file3')">OPEN RECORD</button>
+
+        <div class="document" id="file3">
+            <p><strong>DOCUMENT: ARCHIVE TRANSFER</strong></p>
+            <p>DATE: 03/14/2012</p>
+            <p>
+                Historical records were transferred into the
+                Mountain Hill Health information system.
+            </p>
+            <p>
+                Several files were assigned new identification
+                numbers during the transfer.
+            </p>
+            <p class="warning">
+                ORIGINAL DATE METADATA RETAINED.
+            </p>
+            <p>RECORD STATUS: VERIFIED</p>
+        </div>
+    </div>
+
+    <div class="file">
+        <strong>FILE 004 — INTERNAL CORRESPONDENCE</strong>
+        <p>Date: December 2, 2011</p>
+        <button onclick="openFile('file4')">OPEN RECORD</button>
+
+        <div class="document" id="file4">
+            <p><strong>DOCUMENT: INTERNAL CORRESPONDENCE</strong></p>
+            <p>DATE: 12/02/2011</p>
+            <p>FROM: ARCHIVE MANAGEMENT</p>
+            <p>SUBJECT: HISTORICAL MATERIAL</p>
+            <p>
+                The recovered materials predate the company's
+                official registration.
+            </p>
+            <p>
+                Please ensure that the original dates remain
+                attached to their respective records.
+            </p>
+            <p class="warning">
+                NO FURTHER DISTRIBUTION AUTHORIZED.
+            </p>
+            <p>RECORD STATUS: RESTRICTED</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="panel">
+    <h2>ARCHIVE SYSTEM INFORMATION</h2>
+    <p>
+        SERVER: ARCHIVE-01<br>
+        DIRECTORY VERSION: 2.11<br>
+        LAST REVIEW: 2026<br>
+        RECORDS INDEXED: 4
+    </p>
+</section>
+
+<a class="back" href="sectors.html">← RETURN TO DATABASE PORTAL</a>
+
+</main>
+
+<footer>
+MHH INTERNAL INFORMATION SYSTEM<br>
+MOUNTAIN HILL HEALTH © 2026<br>
+Fictional horror ARG archive.
+</footer>
+
+<script>
+function openFile(id) {
+    const documentPanel = document.getElementById(id);
+
+    if (documentPanel.style.display === "block") {
+        documentPanel.style.display = "none";
+    } else {
+        documentPanel.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
