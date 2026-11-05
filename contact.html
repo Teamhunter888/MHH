@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Mountain Hill Health</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e9eef3;
+  color: #333;
+  font-size: 14px;
+}
+
+header {
+  background: linear-gradient(#fff, #dceaf5);
+  padding: 20px 5%;
+  border-bottom: 4px solid #174c78;
+}
+
+.logo {
+  color: #174c78;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.tagline {
+  color: #55758f;
+  margin-top: 5px;
+}
+
+nav {
+  background: linear-gradient(#286b9d, #123e65);
+  padding: 13px 5%;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 25px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+nav a:hover { text-decoration: underline; }
+
+.banner {
+  background: linear-gradient(110deg, #174c78, #7eaccb);
+  color: white;
+  padding: 35px 7%;
+}
+
+.banner h1 {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+main {
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 0 18px;
+}
+
+.panel {
+  background: white;
+  border: 1px solid #c5d4df;
+  margin-bottom: 20px;
+  padding: 22px;
+  line-height: 1.7;
+}
+
+.panel h2 {
+  color: #174c78;
+  border-bottom: 1px solid #cbd8e2;
+  padding-bottom: 10px;
+}
+
+.department {
+  background: #eef5fa;
+  border-left: 4px solid #286b9d;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #174c78;
+  margin: 12px 0 5px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aebfcd;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 15px;
+  padding: 11px 22px;
+  background: #174c78;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+.notice {
+  color: #666;
+  font-size: 12px;
+}
+
+footer {
+  background: #123e65;
+  color: white;
+  padding: 25px 5%;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .logo { font-size: 23px; }
+  nav a {
+    display: inline-block;
+    margin: 5px 12px 5px 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MOUNTAIN HILL HEALTH</div>
+  <div class="tagline">Advancing Health. Supporting Tomorrow.</div>
+</header>
+
+<nav>
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT US</a>
+  <a href="products.html">PRODUCTS</a>
+  <a href="research.html">RESEARCH</a>
+  <a href="contact.html">CONTACT</a>
+</nav>
+
+<section class="banner">
+  <h1>Contact Mountain Hill Health</h1>
+  <p>We welcome inquiries regarding our company and services.</p>
+</section>
+
+<main>
+
+  <section class="panel">
+    <h2>Corporate Headquarters</h2>
+    <p>
+      Mountain Hill Health<br>
+      Phoenix, Arizona<br>
+      United States
+    </p>
+    <p><strong>Corporate Office Hours:</strong></p>
+    <p>Monday – Friday: 8:00 AM – 5:00 PM</p>
+  </section>
+
+  <section class="panel">
+    <h2>Department Information</h2>
+
+    <div class="department">
+      <h3>General Inquiries</h3>
+      <p>General company and corporate information.</p>
+    </div>
+
+    <div class="department">
+      <h3>Product Information</h3>
+      <p>Questions regarding the MHH product portfolio.</p>
+    </div>
+
+    <div class="department">
+      <h3>Research & Development</h3>
+      <p>Research department and corporate development inquiries.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Send an Inquiry</h2>
+    <p>
+      Use the form below to explore our fictional
+      corporate contact interface.
+    </p>
+
+    <form onsubmit="event.preventDefault(); alert('This is a fictional ARG demonstration. No message was sent or information collected.');">
+      <label for="department">Department</label>
+      <select id="department">
+        <option>General Inquiries</option>
+        <option>Product Information</option>
+        <option>Research & Development</option>
+      </select>
+
+      <label for="subject">Subject</label>
+      <input id="subject" type="text" placeholder="Enter a subject">
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Enter your message"></textarea>
+
+      <button type="submit">Submit Inquiry</button>
+    </form>
+
+    <p class="notice">
+      Demonstration only. Do not enter personal information.
+      This form does not send or store messages.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  Mountain Hill Health | Phoenix, Arizona<br>
+  © 2011–2026 Mountain Hill Health<br><br>
+  This is a fictional website created as part of a horror ARG.
+  All products and medical claims are fictional.
+</footer>
+
+</body>
+</html>
