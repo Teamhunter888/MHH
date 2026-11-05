@@ -159,7 +159,19 @@ footer {
         INTERNAL INFORMATION MANAGEMENT SYSTEM
     </div>
 </header>
+<section class="access-terminal">
+  <h2>SECURE DATABASE ACCESS</h2>
+  <p>AUTHORIZED PERSONNEL ONLY</p>
+  <p>Enter your assigned access code to continue.</p>
 
+  <input type="text" id="accessCode" placeholder="ENTER ACCESS CODE">
+
+  <button onclick="checkAccess()">AUTHENTICATE</button>
+
+  <p class="access-message" id="accessMessage">
+    SYSTEM READY. AWAITING INPUT.
+  </p>
+</section>
 <main>
 
 <section class="system">
