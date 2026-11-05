@@ -111,6 +111,10 @@ h2 {
     font-family: monospace;
 }
 
+.access-terminal button:hover {
+    background: #24699e;
+}
+
 .access-message {
     color: #55b9ff;
     font-size: 12px;
@@ -122,6 +126,13 @@ h2 {
     border: 1px solid #29445e;
     padding: 17px;
     margin: 12px 0;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+a.directory:hover {
+    background: #1c344d;
+    border-color: #55b9ff;
 }
 
 .directory strong {
@@ -219,23 +230,23 @@ footer {
 
     <div id="directories" class="hidden">
 
-        <div class="directory">
+        <a href="archives.html" class="directory">
             <strong>01 / ARCHIVES</strong>
             <p>Historical documents and archived company records.</p>
             <span class="unlocked">ACCESS: GRANTED</span>
-        </div>
+        </a>
 
-        <div class="directory">
+        <a href="research.html" class="directory">
             <strong>02 / RESEARCH</strong>
             <p>Research files, development records and reports.</p>
             <span class="unlocked">ACCESS: GRANTED</span>
-        </div>
+        </a>
 
-        <div class="directory">
+        <a href="personnel.html" class="directory">
             <strong>03 / PERSONNEL</strong>
             <p>Internal correspondence and employee records.</p>
             <span class="unlocked">ACCESS: GRANTED</span>
-        </div>
+        </a>
 
         <div class="directory">
             <strong>04 / RESTRICTED</strong>
